@@ -9,9 +9,12 @@
 
 ## Tech ToDo
 
-* use dj-static or s3boto
+* Make navigation less redundant
 * check all templates for missing i18n
 * cache pages to keep them static-like
+* error log emailing
+
+* djstatic or s3boto?
 * django-pipeline + django-twitter-bootstrap
 * remove bootstrap classes from markup, use mixins to adapt jeanwaves classes
 * give jeanweaves classes a good prefixs (smacss/bem?)
