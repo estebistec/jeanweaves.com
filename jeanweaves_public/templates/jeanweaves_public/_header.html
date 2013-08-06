@@ -1,0 +1,18 @@
+{% load i18n %}
+<header class="site-header row-fluid">
+  <div class="site-header-contents span6 offset3">
+    <div class="site-header-brand">
+      <h1 class="site-name"><span class="fn">{{ site.author }}</span>, {% trans 'Handweaver' %}</h1>
+      <h2 class="site-tagline">{% trans 'Textiles to delight your heart and home' %}</h2>
+    </div>
+    <nav>
+      <ul class="site-nav">
+        <li class="site-nav-item"><a href="{% url 'index' %}" title="Home" class="site-nav-link">Home</a></li>
+        <li class="site-nav-item"><a href="{% url 'about' %}" title="About" class="site-nav-link">About</a></li>
+        <li class="site-nav-item"><a href="{% url 'exhibits' %}" title="Exhibits" class="site-nav-link">Exhibits</a></li>
+        {% comment %}<li class="site-nav-item"><a href="{% url 'tools' %}" title="Tools" class="site-nav-link">Tools</a></li>{% endcomment %}
+        <li class="site-nav-item"><a href="{% url 'contact' %}" title="Contact me" class="site-nav-link">Contact me</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

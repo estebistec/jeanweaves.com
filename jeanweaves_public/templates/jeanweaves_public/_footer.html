@@ -1,0 +1,24 @@
+{% load i18n %}
+<footer class="site-footer row-fluid">
+  <div class="site-footer-contents span6 offset3 row-fluid">
+    <ul class="footer-site-nav span4">
+      <li class="footer-site-nav-item"><a href="{% url 'index' %}" title="{% trans 'Home' %}" class="site-nav-link">{% trans 'Home' %}</a></li>
+      <li class="footer-site-nav-item"><a href="{% url 'about' %}" title="{% trans 'About' %}" class="site-nav-link">{% trans 'About' %}</a></li>
+      <li class="footer-site-nav-item"><a href="{% url 'exhibits' %}" title="{% trans 'Exhibits' %}" class="site-nav-link">{% trans 'Exhibits' %}</a></li>
+      {% comment %}<li class="footer-site-nav-item"><a href="{% url 'tools' %}" title="{% trans 'Tools' %}" class="site-nav-link">{% trans 'Tools' %}</a></li>{% endcomment %}
+      <li class="footer-site-nav-item"><a href="{% url 'contact' %}" title="{% trans 'Contact me' %}" class="site-nav-link">{% trans 'Contact me' %}</a></li>
+    </ul>
+    <div id="hcard-Jean-Williams" class="vcard span4">
+      <div class="row-fluid">
+        <div>
+          <p><span class="fn">{{ site.author }}</span>, {% trans 'Handweaver' %}</p>
+          <p>{% trans 'Textiles to delight your heart and home' %}</p>
+          <p>
+            <a class="email" href="mailto:{{ site.author_email }}">{{ site.author_email }}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="copyright span4">&copy; {{ site.copyright }} {{ site.author }}</div>
+  </div>
+</footer>
