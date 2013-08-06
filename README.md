@@ -14,8 +14,10 @@
 * cache pages to keep them static-like
 * error log emailing
 
-* djstatic or s3boto?
-* django-pipeline + django-twitter-bootstrap
+* general django setup: https://devcenter.heroku.com/articles/django
+* staticfiles: https://devcenter.heroku.com/articles/django-assets
+  * djstatic or s3boto?
+  * django-pipeline + django-twitter-bootstrap
 * remove bootstrap classes from markup, use mixins to adapt jeanwaves classes
 * give jeanweaves classes a good prefixs (smacss/bem?)
 * sentry
