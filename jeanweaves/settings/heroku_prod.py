@@ -7,7 +7,7 @@ import os
 from .base import *
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jeanweaves-staging.herokuapp.com']
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
