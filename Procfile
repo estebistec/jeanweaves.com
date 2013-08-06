@@ -1,1 +1,1 @@
-web: gunicorn jeanweaves/wsgi.py
+web: gunicorn jeanweaves.wsgi:application
