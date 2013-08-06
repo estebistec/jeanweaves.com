@@ -9,6 +9,9 @@
 
 ## Tech ToDo
 
+* Put heroku Procfile/requirements on a long-running branch
+  * deployments/heroku_staging
+  * deployments/heroku_prod
 * Make navigation less redundant
 * check all templates for missing i18n
 * cache pages to keep them static-like
