@@ -1,1 +1,1 @@
-web: gunicorn jeanweaves.wsgi:application
+web: /app/.heroku/python/bin/gunicorn jeanweaves.wsgi:application
