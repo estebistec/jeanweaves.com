@@ -1,3 +1,4 @@
 -r _base.txt
 boto==2.8.0
 django-storages==1.1.8
+gunicorn==17.5
