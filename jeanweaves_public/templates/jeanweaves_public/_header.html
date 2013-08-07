@@ -7,11 +7,9 @@
     </div>
     <nav>
       <ul class="site-nav">
-        <li class="site-nav-item"><a href="{% url 'index' %}" title="Home" class="site-nav-link">Home</a></li>
-        <li class="site-nav-item"><a href="{% url 'about' %}" title="About" class="site-nav-link">About</a></li>
-        <li class="site-nav-item"><a href="{% url 'exhibits' %}" title="Exhibits" class="site-nav-link">Exhibits</a></li>
-        {% comment %}<li class="site-nav-item"><a href="{% url 'tools' %}" title="Tools" class="site-nav-link">Tools</a></li>{% endcomment %}
-        <li class="site-nav-item"><a href="{% url 'contact' %}" title="Contact me" class="site-nav-link">Contact me</a></li>
+        {% for nav_link in site.nav %}
+          <li class="site-nav-item"><a href="{{ nav_link.href }}" title="{{ nav_link.title }}" class="site-nav-link">{{ nav_link.label }}</a></li>
+        {% endfor %}
       </ul>
     </nav>
   </div>
