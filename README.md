@@ -10,8 +10,8 @@
 
 ## Tech ToDo
 
-* check all templates for missing i18n
 * cache pages to keep them static-like
+* check all templates for missing i18n
 * bring local-dev in line with deployment
   * e.g., env vars and postactivate scripts to set them
 * error log emailing
