@@ -3,18 +3,18 @@
 ## Features ToDo
 
 * tumblr integration
+* google analytics
 * image management (flickr integration)
 * image rollover to detail
 * exhibits management or i18n
 
 ## Tech ToDo
 
-* Put heroku Procfile/requirements on a long-running branch
-  * deployments/heroku_staging
-  * deployments/heroku_prod
 * Make navigation less redundant
 * check all templates for missing i18n
 * cache pages to keep them static-like
+* bring local-dev in line with deployment
+  * e.g., env vars and postactivate scripts to set them
 * error log emailing
 
 * general django setup: https://devcenter.heroku.com/articles/django
