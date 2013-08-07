@@ -15,6 +15,7 @@ def site_info(request):
             'copyright': '2013',  # TODO dynamic and cached
             'nav': [
                 {'href': reverse('index'), 'title': _('Home'), 'label': _('Home')},
+                {'href': reverse('posts'), 'title': _('Blog'), 'label': _('Blog')},
                 {'href': reverse('about'), 'title': _('About'), 'label': _('About')},
                 {'href': reverse('exhibits'), 'title': _('Exhibits'), 'label': _('Exhibits')},
                 #{'href': reverse('tools'), 'title': _('Tools'), 'label': _('Tools')},

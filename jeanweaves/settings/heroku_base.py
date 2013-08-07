@@ -51,3 +51,7 @@ LOGGING = {
         },
     }
 }
+
+BLOG_BACKEND = 'jeanweaves_blog.blog.backends.tumblr'
+TUMBLR_API_KEY = get_env_variable('TUMBLR_API_KEY')
+TUMBLR_BLOG_NAME = u'jeanweaves'
