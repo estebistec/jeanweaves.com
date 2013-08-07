@@ -2,7 +2,6 @@
 
 
 from django.utils.translation import ugettext_lazy as _
-from django.views.generic import TemplateView
 
 from . import galleries
 from jeanweaves_public.views import JeanWeavesPageView
