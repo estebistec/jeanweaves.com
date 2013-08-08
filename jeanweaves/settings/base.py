@@ -4,6 +4,7 @@
 
 import os
 
+from django.core.exceptions import ImproperlyConfigured
 from unipath import Path
 
 
