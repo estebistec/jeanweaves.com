@@ -3,11 +3,11 @@
 {% block main %}
 <div class="row-fluid">
   <div class="page-content span6 offset3">
-    {# TODO wrap articles with ol/li #}
+    <a href="http://jeanweaves.tumblr.com/rss" title="{% trans 'Subscribe to posts' %}" class="blog-subscribe-link"><i class="icon-rss"></i> {% trans 'Subscribe' %}</a>
     <ol class="blog-posts">
       {% for post in posts %}
-        <li>
-          <article class="blog-post">
+        <li class="blog-post">
+          <article>
             <h1>{{ post.title }}</h1>
             <h2><time datetime="{{ post.time|date:'c' }}" pubdate>{{ post.time|localtime }}</time></h2>
             {{ post.body|safe }}
@@ -15,7 +15,6 @@
         </li>
       {% endfor %}
     </ol>
-    <a href="http://jeanweaves.tumblr.com/rss">{% trans 'RSS' %}</a>
   </div>
 </div>
 {% endblock %}
