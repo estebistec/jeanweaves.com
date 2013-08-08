@@ -171,3 +171,39 @@ body {
 .footer-site-nav {
   list-style: none;
 }
+
+.blog-posts {
+  list-style: none;
+  margin-left: 0;
+}
+
+.blog-post {
+  border-top: 2px solid #777;
+}
+
+.blog-post+.blog-post {
+  margin-top: 15px;
+}
+
+.blog-post h1 {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.blog-post h2 {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.blog-subscribe-link {
+  font-size: 200%;
+  line-height: 300%;
+}
+
+.blog-subscribe-link:link, .blog-subscribe-link:active, .blog-subscribe-link:hover, .blog-subscribe-link:visited {
+  text-decoration: none;
+}
+
+.blog-subscribe-link .icon-rss {
+  margin-right: 15px;
+}
