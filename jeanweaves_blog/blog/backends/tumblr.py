@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 
 
-from dateutil.parser import parse
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
 import pytumblr
-
-from jeanweaves_blog.blog.types import Post
 
 
 class Backend(object):
@@ -33,11 +30,6 @@ class Backend(object):
 	def get_posts(self):
 		tumblr_posts = self.tumblr.posts(self.blog_name)
 		return [
-		    Post(
-		    	title=post[u'title'],
-		    	time=parse(post[u'date']),
-		    	body=post[u'body']
-		    )
-		    for post in tumblr_posts[u'posts']
+		    post for post in tumblr_posts[u'posts']
 		    if post[u'state'] == u'published'
 		]

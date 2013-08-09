@@ -1,0 +1,5 @@
+<article class="post-text">
+  <h1 class="post-text-title">{{ post.title|safe }}</h1>
+  <h2><time datetime="{{ post.date|date:'c' }}" pubdate>{{ post.date }}</time></h2>
+  <div class="post-text-body">{{ post.body|safe }}</div>
+</article>

@@ -1,0 +1,5 @@
+<article class="post-photo">
+  <h1 class="post-photo-caption">{{ post.caption|safe }}</h1>
+  <h2><time datetime="{{ post.date|date:'c' }}" pubdate>{{ post.date }}</time></h2>
+  <img src="{{ post.photos.0.alt_sizes.1.url }}">
+</article>

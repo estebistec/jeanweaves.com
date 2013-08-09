@@ -1,0 +1,46 @@
+.blog-posts {
+  list-style: none;
+  margin-left: 0;
+}
+
+.blog-post {
+  border-top: 2px solid #bbb;
+}
+
+.blog-post+.blog-post {
+  margin-top: 40px;
+}
+
+.blog-post h1 {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.blog-post h2 {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.blog-subscribe-link {
+  font-size: 150%;
+  line-height: 200%;
+}
+
+.blog-subscribe-link:link, .blog-subscribe-link:active, .blog-subscribe-link:hover, .blog-subscribe-link:visited {
+  text-decoration: none;
+}
+
+.post-quote-text:before, .post-quote-text:after {
+  content: "\0022";
+}
+
+.post-quote-source:before {
+  content: "-";
+}
+
+.post-chat-line {
+  padding: 5px;
+  background-color: #eef;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}

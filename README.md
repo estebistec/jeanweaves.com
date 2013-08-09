@@ -2,7 +2,6 @@
 
 ## Features ToDo
 
-* tumblr integration
 * google analytics
 * image management (flickr integration)
 * image rollover to detail

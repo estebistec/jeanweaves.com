@@ -1,5 +1,5 @@
 {% extends page.layout %}
-{% load i18n tz %}
+{% load i18n tumblr_posts %}
 {% block main %}
 <div class="row-fluid">
   <div class="page-content span6 offset3">
@@ -7,11 +7,7 @@
     <ol class="blog-posts">
       {% for post in posts %}
         <li class="blog-post">
-          <article>
-            <h1>{{ post.title }}</h1>
-            <h2><time datetime="{{ post.time|date:'c' }}" pubdate>{{ post.time|localtime }}</time></h2>
-            {{ post.body|safe }}
-          </article>
+          {% tumblr_post post %}
         </li>
       {% endfor %}
     </ol>
