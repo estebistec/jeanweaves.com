@@ -9,6 +9,8 @@
 
 ## Tech ToDo
 
+* remove all font files for now :/
+* only load blog CSS on blog post list
 * cache pages to keep them static-like
 * check all templates for missing i18n
 * bring local-dev in line with deployment
