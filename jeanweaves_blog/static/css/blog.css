@@ -5,6 +5,8 @@
 
 .blog-post {
   border-top: 2px solid #bbb;
+  margin-top: 40px;
+  clear: both;
 }
 
 .blog-post+.blog-post {
@@ -43,4 +45,10 @@
   background-color: #eef;
   border: 1px solid #ddd;
   border-radius: 5px;
+}
+
+.post-text img {
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
