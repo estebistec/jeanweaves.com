@@ -1,5 +1,9 @@
 # jeanweaves.com Project
 
+## Useful commands
+
+```PYTHONPATH=. django-admin.py collectstatic --noinput --ignore=jeanweaves_public/static/img --settings=jeanweaves.settings.heroku_staging```
+
 ## Features ToDo
 
 * google analytics
