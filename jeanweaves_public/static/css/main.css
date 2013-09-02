@@ -72,14 +72,38 @@ body {
   text-align: center;
 }
 
+/* min-width: 1300px */
+
 .image-set-item {
   display: inline-block;
   margin: 5px;
   text-align: center;
+  border: 5px solid #fff;
+  box-shadow: 0 0 1px 1px #CCC;
 }
 
 .image-set-image {
-  width: 296px;
+  width: 285px;
+}
+
+@media (min-width: 980px) and (max-width: 1299px) {
+  .image-set-item {
+    border: 3px solid #fff;
+    margin: 3px;
+  }
+  .image-set-image {
+    width: 190px;
+  }
+}
+
+@media (max-width: 979px) {
+  .image-set-item {
+    border: 1px solid #fff;
+    margin: 2px;
+  }
+  .image-set-image {
+    width: 100%;
+  }
 }
 
 .gallery-link {
