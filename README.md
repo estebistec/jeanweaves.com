@@ -14,6 +14,7 @@
 ## Tech ToDo
 
 * remove all font files for now :/
+* upgrade to bootstrap 3.0, and use less of it -OR- try a responsive grid component + reset
 * only load blog CSS on blog post list
 * cache pages to keep them static-like
 * check all templates for missing i18n
