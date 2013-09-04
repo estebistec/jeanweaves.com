@@ -2,6 +2,7 @@
 
 
 from django.utils.translation import ugettext_lazy as _
+from django.views.decorators.cache import cache_page
 from django.views.generic import TemplateView
 
 
@@ -43,3 +44,8 @@ exhibits = JeanWeavesPageView.as_view(
 #     template_name='jeanweaves_public/tools.html',
 #     page_title=_('Tools')
 # ).as_view()
+
+THIRTY_DAYS = 60 * 60 * 24 * 30
+about = cache_page(THIRTY_DAYS)(about)
+contact = cache_page(THIRTY_DAYS)(contact)
+exhibits = cache_page(THIRTY_DAYS)(exhibits)

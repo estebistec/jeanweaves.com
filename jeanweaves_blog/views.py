@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 
+from django.views.decorators.cache import cache_page
+
 from .blog import blog
 from jeanweaves_public.views import JeanWeavesPageView
 
@@ -16,3 +18,6 @@ class BlogPostsView(JeanWeavesPageView):
 
 
 posts = BlogPostsView.as_view()
+
+THIRTY_MINUTES = 60 * 30
+posts = cache_page(THIRTY_MINUTES)(posts)

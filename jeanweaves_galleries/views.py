@@ -2,6 +2,7 @@
 
 
 from django.utils.translation import ugettext_lazy as _
+from django.views.decorators.cache import cache_page
 
 from . import galleries
 from jeanweaves_public.views import JeanWeavesPageView
@@ -63,3 +64,13 @@ towels = JeanWeavesGalleryView.as_view(
     page_title=_('Towels'),
     photos=galleries.towels
 )
+
+THIRTY_DAYS = 60 * 60 * 24 * 30
+index = cache_page(THIRTY_DAYS)(index)
+animals = cache_page(THIRTY_DAYS)(animals)
+damask = cache_page(THIRTY_DAYS)(damask)
+placemats_and_napkins = cache_page(THIRTY_DAYS)(placemats_and_napkins)
+runners = cache_page(THIRTY_DAYS)(runners)
+scarves = cache_page(THIRTY_DAYS)(scarves)
+throws = cache_page(THIRTY_DAYS)(throws)
+towels = cache_page(THIRTY_DAYS)(towels)
