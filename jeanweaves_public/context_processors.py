@@ -15,6 +15,7 @@ def site_info(request):
             'copyright': '2013',  # TODO dynamic and cached
             'nav': [
                 {'href': reverse('index'), 'title': _('Home'), 'label': _('Home')},
+                {'href': 'http://www.etsy.com/shop/jeanweaves', 'title': _('Shop'), 'label': _('Shop')},
                 {'href': reverse('posts'), 'title': _('Blog'), 'label': _('Blog')},
                 {'href': reverse('about'), 'title': _('About'), 'label': _('About')},
                 {'href': reverse('exhibits'), 'title': _('Exhibits'), 'label': _('Exhibits')},
