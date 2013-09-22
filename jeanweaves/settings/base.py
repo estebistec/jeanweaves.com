@@ -7,6 +7,8 @@ import os
 from django.core.exceptions import ImproperlyConfigured
 from unipath import Path
 
+import jeanweaves.jinja_safestrings
+
 
 def get_env_variable(var_name):
     """Get the named environment variable or raise ImproperlyConfigured"""
@@ -99,6 +101,8 @@ INSTALLED_APPS = (
 
     # 'django.contrib.admin',
     # 'django.contrib.admindocs',
+
+    'coffin',
 
     'jeanweaves_public',
     'jeanweaves_galleries',
