@@ -17,7 +17,5 @@ class BlogPostsView(JeanWeavesPageView):
         return context
 
 
-posts = BlogPostsView.as_view()
-
 THIRTY_MINUTES = 60 * 30
-posts = cache_page(THIRTY_MINUTES)(posts)
+posts = cache_page(THIRTY_MINUTES)(BlogPostsView.as_view())

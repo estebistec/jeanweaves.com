@@ -1,6 +1,6 @@
 <article class="post-chat">
   <h1 class="post-chat-title">{{ post.title|safe }}</h1>
-  <h2><time datetime="{{ post.date|date:'c' }}" pubdate>{{ post.date }}</time></h2>
+  <h2><time datetime="{{ post.date|date('c') }}" pubdate>{{ post.date|date('DATETIME_FORMAT') }}</time></h2>
   {% for line in post.dialogue %}
     <p class="post-chat-line">
       <span class="post-chat-line-label">{{ line.label|safe }}</span>
