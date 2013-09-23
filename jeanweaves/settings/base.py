@@ -7,8 +7,6 @@ import os
 from django.core.exceptions import ImproperlyConfigured
 from unipath import Path
 
-import jeanweaves.jinja_safestrings
-
 
 def get_env_variable(var_name):
     """Get the named environment variable or raise ImproperlyConfigured"""
@@ -26,7 +24,6 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
-
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -49,7 +46,6 @@ USE_L10N = True
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
 
-
 # List of finder classes that know how to find static files in
 # various locations.
 STATICFILES_FINDERS = (
@@ -60,20 +56,19 @@ STATICFILES_FINDERS = (
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-    # 'django.template.loaders.eggs.Loader',
+    'django_jinja.loaders.AppLoader',
+    'django_jinja.loaders.FileSystemLoader',
 )
+
+DEFAULT_JINJA2_TEMPLATE_INTERCEPT_RE = r"^(?!debug_toolbar/).*"
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     # django.conf.global_settings.TEMPLATE_CONTEXT_PROCESSORS:
-    # "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django.core.context_processors.static",
     "django.core.context_processors.tz",
-    # "django.contrib.messages.context_processors.messages",
 
     'jeanweaves_public.context_processors.site_info',
     # 'jeanweaves_public.context_processors.analytics',
@@ -82,28 +77,15 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
-    # 'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    # 'django.contrib.auth.middleware.AuthenticationMiddleware',
-    # 'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
 ROOT_URLCONF = 'jeanweaves.urls'
 
 INSTALLED_APPS = (
-    # 'django.contrib.auth',
-    # 'django.contrib.contenttypes',
-    # 'django.contrib.sessions',
-    # 'django.contrib.messages',
-
     'django.contrib.staticfiles',
-
-    # 'django.contrib.admin',
-    # 'django.contrib.admindocs',
-
-    'coffin',
-
+    'django_jinja',
     'jeanweaves_public',
     'jeanweaves_galleries',
     'jeanweaves_blog',

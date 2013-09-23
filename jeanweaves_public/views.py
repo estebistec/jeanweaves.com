@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 
-from coffin.views.generic import TemplateView
 from django.utils.translation import ugettext_lazy as _
 from django.views.decorators.cache import cache_page
+from django.views.generic import TemplateView
 
 
 class JeanWeavesPageView(TemplateView):

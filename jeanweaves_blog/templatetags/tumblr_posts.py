@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
 
 
-from coffin import template
-from coffin.template.loader import render_to_string
 from dateutil.parser import parse
 from django.conf import settings
+from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
+from django_jinja import library
 import pytz
 
 
-register = template.Library()
-
 TIME_ZONE = pytz.timezone(settings.TIME_ZONE)
 
+lib = library.Library()
 
-@register.object
+
+@lib.global_function
 def render_tumblr_post(post):
     # NOTE doing astimezone since coffin doesn't seem to have jinja implement
     # Django l10n features
