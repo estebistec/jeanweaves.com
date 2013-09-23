@@ -1,17 +1,16 @@
 {% extends page.layout %}
-{% load i18n %}
 {% block main %}
 <div class="row-fluid">
   <div class="span6 offset3">
-    <h2>{% trans 'Contact me' %}</h2>
-    {% blocktrans with author=site.author author_email=site.author_email %}
+    <h2>{% trans %}Contact me{% endtrans %}</h2>
+    {% trans author=site.author, author_email=site.author_email %}
     <div id="hcard-Jean-Williams" class="vcard">
       <p>For more information on available items, please contact me at</p>
       <div><a class="email" href="mailto:{{ author_email }}">{{ author_email }}</a></div>
       <div><span class="fn">{{ author }}</span>, Handweaver</div>
     </div>
-    {% endblocktrans %}
-    <p class="contact-greeting">{% trans 'I look forward to hearing from you!' %}</p>
+    {% endtrans %}
+    <p class="contact-greeting">{% trans %}I look forward to hearing from you!{% endtrans %}</p>
   </div>
 </div>
 {% endblock %}

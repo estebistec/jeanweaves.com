@@ -3,5 +3,5 @@
     <span class="post-quote-text">{{ post.text|safe }}</span>
 	 <span class="post-quote-source">{{ post.source|safe }}</span>
   </h1>
-  <h2><time datetime="{{ post.date|date:'c' }}" pubdate>{{ post.date }}</time></h2>
+  <h2><time datetime="{{ post.date|date('c') }}" pubdate>{{ post.date|date('DATETIME_FORMAT') }}</time></h2>
 </article>

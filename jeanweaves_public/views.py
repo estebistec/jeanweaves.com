@@ -25,27 +25,27 @@ class JeanWeavesPageView(TemplateView):
         return context
 
 
-about = JeanWeavesPageView.as_view(
-    template_name='jeanweaves_public/about.html',
-    page_title=_('About')
-)
+class JeanWeavesAboutView(JeanWeavesPageView):
+    template_name = 'jeanweaves_public/about.html'
+    page_title = _('About')
 
-contact = JeanWeavesPageView.as_view(
-    template_name='jeanweaves_public/contact.html',
-    page_title=_('Contact me')
-)
 
-exhibits = JeanWeavesPageView.as_view(
-    template_name='jeanweaves_public/exhibits.html',
-    page_title=_('Exhibits')
-)
+class JeanWeavesContactView(JeanWeavesPageView):
+    template_name = 'jeanweaves_public/contact.html'
+    page_title = _('Contact me')
 
-# tools = JeanWeavesPageView.as_view(
-#     template_name='jeanweaves_public/tools.html',
-#     page_title=_('Tools')
-# ).as_view()
+
+class JeanWeavesExhibitsView(JeanWeavesPageView):
+    template_name = 'jeanweaves_public/exhibits.html'
+    page_title = _('Exhibits')
+
+
+# class JeanWeavesToolsView(JeanWeavesPageView):
+#     template_name = 'jeanweaves_public/tools.html'
+#     page_title = _('Tools')
+
 
 THIRTY_DAYS = 60 * 60 * 24 * 30
-about = cache_page(THIRTY_DAYS)(about)
-contact = cache_page(THIRTY_DAYS)(contact)
-exhibits = cache_page(THIRTY_DAYS)(exhibits)
+about = cache_page(THIRTY_DAYS)(JeanWeavesAboutView.as_view())
+contact = cache_page(THIRTY_DAYS)(JeanWeavesContactView.as_view())
+exhibits = cache_page(THIRTY_DAYS)(JeanWeavesExhibitsView.as_view())

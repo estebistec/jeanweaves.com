@@ -18,59 +18,59 @@ class JeanWeavesGalleryView(JeanWeavesPageView):
         return page_context
 
 
-index = JeanWeavesGalleryView.as_view(
-    template_name='jeanweaves_galleries/index.html',
-    photos=galleries.index
-)
+class JeanWeavesGalleryIndexView(JeanWeavesGalleryView):
+    template_name = 'jeanweaves_galleries/index.html'
+    photos = galleries.index
 
-animals = JeanWeavesGalleryView.as_view(
-    template_name='jeanweaves_galleries/animals.html',
-    page_title=_('Animals'),
-    photos=galleries.animals
-)
 
-damask = JeanWeavesGalleryView.as_view(
-    template_name='jeanweaves_galleries/damask.html',
-    page_title=_('Damask'),
-    photos=galleries.damask
-)
+class JeanWeavesAnimalsGalleryView(JeanWeavesGalleryView):
+    template_name = 'jeanweaves_galleries/animals.html'
+    page_title = _('Animals')
+    photos = galleries.animals
 
-placemats_and_napkins = JeanWeavesGalleryView.as_view(
-    template_name='jeanweaves_galleries/placemats-and-napkins.html',
-    page_title=_('Placemats and Napkins'),
-    photos=galleries.placemats_and_napkins
-)
 
-runners = JeanWeavesGalleryView.as_view(
-    template_name='jeanweaves_galleries/runners.html',
-    page_title=_('Runners'),
-    photos=galleries.runners
-)
+class JeanWeavesDamaskGalleryView(JeanWeavesGalleryView):
+    template_name = 'jeanweaves_galleries/damask.html'
+    page_title = _('Damask')
+    photos = galleries.damask
 
-scarves = JeanWeavesGalleryView.as_view(
-    template_name='jeanweaves_galleries/scarves.html',
-    page_title=_('Scarves'),
-    photos=galleries.scarves
-)
 
-throws = JeanWeavesGalleryView.as_view(
-    template_name='jeanweaves_galleries/throws.html',
-    page_title=_('Throws'),
-    photos=galleries.throws
-)
+class JeanWeavesPlacematsAndNapkinsGalleryView(JeanWeavesGalleryView):
+    template_name = 'jeanweaves_galleries/placemats-and-napkins.html'
+    page_title = _('Placemats and Napkins')
+    photos = galleries.placemats_and_napkins
 
-towels = JeanWeavesGalleryView.as_view(
-    template_name='jeanweaves_galleries/towels.html',
-    page_title=_('Towels'),
-    photos=galleries.towels
-)
+
+class JeanWeavesRunnersGalleryView(JeanWeavesGalleryView):
+    template_name = 'jeanweaves_galleries/runners.html'
+    page_title = _('Runners')
+    photos = galleries.runners
+
+
+class JeanWeavesScarvesGalleryView(JeanWeavesGalleryView):
+    template_name = 'jeanweaves_galleries/scarves.html'
+    page_title = _('Scarves')
+    photos = galleries.scarves
+
+
+class JeanWeavesThrowsGalleryView(JeanWeavesGalleryView):
+    template_name = 'jeanweaves_galleries/throws.html'
+    page_title = _('Throws')
+    photos = galleries.throws
+
+
+class JeanWeavesTowelsGalleryView(JeanWeavesGalleryView):
+    template_name = 'jeanweaves_galleries/towels.html'
+    page_title = _('Towels')
+    photos = galleries.towels
+
 
 THIRTY_DAYS = 60 * 60 * 24 * 30
-index = cache_page(THIRTY_DAYS)(index)
-animals = cache_page(THIRTY_DAYS)(animals)
-damask = cache_page(THIRTY_DAYS)(damask)
-placemats_and_napkins = cache_page(THIRTY_DAYS)(placemats_and_napkins)
-runners = cache_page(THIRTY_DAYS)(runners)
-scarves = cache_page(THIRTY_DAYS)(scarves)
-throws = cache_page(THIRTY_DAYS)(throws)
-towels = cache_page(THIRTY_DAYS)(towels)
+index = cache_page(THIRTY_DAYS)(JeanWeavesGalleryIndexView.as_view())
+animals = cache_page(THIRTY_DAYS)(JeanWeavesAnimalsGalleryView.as_view())
+damask = cache_page(THIRTY_DAYS)(JeanWeavesDamaskGalleryView.as_view())
+placemats_and_napkins = cache_page(THIRTY_DAYS)(JeanWeavesPlacematsAndNapkinsGalleryView.as_view())
+runners = cache_page(THIRTY_DAYS)(JeanWeavesRunnersGalleryView.as_view())
+scarves = cache_page(THIRTY_DAYS)(JeanWeavesScarvesGalleryView.as_view())
+throws = cache_page(THIRTY_DAYS)(JeanWeavesThrowsGalleryView.as_view())
+towels = cache_page(THIRTY_DAYS)(JeanWeavesTowelsGalleryView.as_view())

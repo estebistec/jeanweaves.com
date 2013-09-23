@@ -1,13 +1,12 @@
 {% extends page.layout %}
-{% load i18n tumblr_posts %}
 {% block main %}
 <div class="row-fluid">
   <div class="page-content span6 offset3">
-    <a href="http://jeanweaves.tumblr.com/rss" title="{% trans 'Subscribe to posts' %}" class="blog-subscribe-link">{% trans 'Subscribe' %}</a>
+    <a href="http://jeanweaves.tumblr.com/rss" title="{% trans %}Subscribe to posts{% endtrans %}" class="blog-subscribe-link">{% trans %}Subscribe{% endtrans %}</a>
     <ol class="blog-posts">
       {% for post in posts %}
         <li class="blog-post">
-          {% tumblr_post post %}
+          {{ render_tumblr_post(post) }}
         </li>
       {% endfor %}
     </ol>
