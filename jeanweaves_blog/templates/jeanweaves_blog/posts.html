@@ -5,8 +5,12 @@
     <a href="http://jeanweaves.tumblr.com/rss" title="{% trans %}Subscribe to posts{% endtrans %}" class="blog-subscribe-link">{% trans %}Subscribe{% endtrans %}</a>
     <ol class="blog-posts">
       {% for post in posts %}
-        <li class="blog-post">
-          {{ render_tumblr_post(post) }}
+        <li class="">
+          <article class="blog-post-artcle">
+            <h1 class="post-text-title">{{ post.title|safe }}</h1>
+            <h2><time datetime="{{ post.date|date('c') }}" pubdate>{{ post.date|date('DATETIME_FORMAT') }}</time></h2>
+            <div class="post-content">{{ post.content|safe }}</div>
+          </article>
         </li>
       {% endfor %}
     </ol>

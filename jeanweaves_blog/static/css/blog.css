@@ -52,3 +52,43 @@
   margin-bottom: 20px;
   margin-right: 20px;
 }
+
+/* TODO clean this up*/
+
+.blog-post-artcle {
+  width: 70%;
+  margin: auto;
+}
+
+.post-content {
+  line-height: 180%;
+}
+
+.post-content p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.post-content img {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(221, 221, 221) rgb(204, 204, 204) rgb(204, 204, 204) rgb(221, 221, 221);
+  box-shadow: 4px 4px 12px rgb(204, 204, 204);
+  position: relative;
+  max-width: 100%;
+  padding: 3px;
+  margin-bottom: 1.625em;
+}
+
+.post-content .alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.666em;
+}
+
+.post-content .alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.666em;
+}
