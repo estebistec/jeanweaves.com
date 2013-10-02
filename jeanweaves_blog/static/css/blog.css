@@ -56,8 +56,9 @@
 /* TODO clean this up*/
 
 .blog-post-artcle {
-  width: 70%;
+  width: 530px;
   margin: auto;
+  clear: both;
 }
 
 .post-content {
@@ -91,4 +92,30 @@
   display: inline;
   float: right;
   margin-left: 1.666em;
+}
+
+@media (max-width: 979px) {
+  .blog-post-artcle {
+    width: 100%;
+  }
+
+  .post-content {
+    line-height: 120%;
+  }
+
+  .post-content p {
+    margin: 0;
+  }
+
+  .post-content img {
+    float: none;
+    width: 100%;
+  }
+
+  .post-content .alignleft {
+    margin-right: 0;
+  }
+
+  .post-content .alignright {
+    margin-left: 0;
 }
