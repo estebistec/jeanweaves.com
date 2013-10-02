@@ -49,4 +49,6 @@ DEBUG_TOOLBAR_CONFIG = {
     'INTERCEPT_REDIRECTS': False
 }
 
-BLOG_BACKEND = 'jeanweaves_blog.blog.backends.mock'
+#BLOG_BACKEND = 'jeanweaves_blog.blog.backends.mock'
+BLOG_BACKEND = 'jeanweaves_blog.blog.backends.wordpress'
+WORDPRESS_BLOG = 'jeanweaves.wordpress.com'
