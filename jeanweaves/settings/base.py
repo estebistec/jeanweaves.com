@@ -62,6 +62,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.CachedStaticFilesStorage'
 STATIC_ROOT = PROJECT_ROOT.child('staticfiles')
 STATIC_URL = '/static/'
 BASE_PHOTO_URL = get_env_variable('BASE_PHOTO_URL')
