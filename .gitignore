@@ -1,3 +1,4 @@
 *.pyc
 /jeanweaves_public/static/img
 .cache
+/staticfiles/*

@@ -17,6 +17,15 @@ def get_env_variable(var_name):
         raise ImproperlyConfigured(error_msg)
 
 
+SECRET_KEY = get_env_variable('SECRET_KEY')
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': ':memory:',
+    }
+}
+
 PROJECT_ROOT = Path(__file__).ancestor(3)
 
 ADMINS = (
@@ -53,6 +62,9 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
+STATIC_ROOT = PROJECT_ROOT.child('staticfiles')
+STATIC_URL = '/static/'
+BASE_PHOTO_URL = get_env_variable('BASE_PHOTO_URL')
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -66,7 +78,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     # django.conf.global_settings.TEMPLATE_CONTEXT_PROCESSORS:
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
-    "django.core.context_processors.media",
     "django.core.context_processors.static",
     "django.core.context_processors.tz",
 

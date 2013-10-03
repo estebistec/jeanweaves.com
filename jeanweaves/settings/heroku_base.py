@@ -8,23 +8,6 @@ from .base import *
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-SECRET_KEY = get_env_variable('SECRET_KEY')
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': ':memory:',
-    }
-}
-
-INSTALLED_APPS += ('storages',)
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-STATIC_ROOT = PROJECT_ROOT.child('collected_static')
-STATIC_URL = 'https://s3.amazonaws.com/jeanweaves/'
-AWS_ACCESS_KEY_ID = get_env_variable('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = get_env_variable('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = 'jeanweaves'
-
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.

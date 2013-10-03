@@ -1,6 +1,4 @@
--r _base.txt
-boto==2.8.0
-django-storages==1.1.8
+-r base.txt
 gunicorn==17.5
 python-dateutil==1.5
 requests==2.0.0
