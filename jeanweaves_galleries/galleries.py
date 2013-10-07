@@ -35,6 +35,10 @@ damask = [
 ]
 
 placemats_and_napkins = [
+    Photo(title=_('Gold napkin'), src_path='img/placemats-and-napkins/512/Napkins_Gold.JPG', detail_src_path='img/placemats-and-napkins/512/Napkins_Gold_Detail.JPG', alt=_('Gold napkin'), link_url=None),
+    Photo(title=_('Avocado placemats'), src_path='img/placemats-and-napkins/512/Placemats_Avocado.jpg', detail_src_path='img/placemats-and-napkins/512/Placemats_Avocado_Detail.jpg', alt=_('Avocado placemats'), link_url=None),
+    Photo(title=_('Lemon blue placemats'), src_path='img/placemats-and-napkins/512/Placemats_Lemon_Blue_front.jpg', detail_src_path='img/placemats-and-napkins/512/Placemats_Lemon_Blue_detail.jpg', alt=_('Lemon blue placemats'), link_url=None),
+    Photo(title=_('Southwest placemats'), src_path='img/placemats-and-napkins/512/Placemats_Southwest_Front.JPG', detail_src_path='img/placemats-and-napkins/512/Placemats_Southwest_Detail.JPG', alt=_('Southwest placemats'), link_url=None),
     Photo(title=_('Napkin 1'), src_path='img/placemats-and-napkins/512/napkin1.jpg', detail_src_path=None, alt=_('Napkin 1'), link_url=None),
     Photo(title=_('Napkins'), src_path='img/placemats-and-napkins/512/napkins.jpg', detail_src_path=None, alt=_('Napkins'), link_url=None),
     Photo(title=_('Placemat'), src_path='img/placemats-and-napkins/512/placemat.jpg', detail_src_path='img/placemats-and-napkins/512/placemat-detail.jpg', alt=_('Placemat'), link_url=None),
@@ -47,6 +51,7 @@ placemats_and_napkins = [
 ]
 
 runners = [
+    Photo(title=_('Overshot holiday runner'), src_path='img/runners/512/Runner_Overshot_Holiday.jpg', detail_src_path='img/runners/512/Runner_Overshot_Holiday_Detail.jpg', alt=_('Overshot holiday runner'), link_url=None),
     Photo(title=_('Runner 1'), src_path='img/runners/512/runner1.jpg', detail_src_path=None, alt=_('Runner 1'), link_url=None),
     Photo(title=_('Runner 2'), src_path='img/runners/512/runner2.jpg', detail_src_path=None, alt=_('Runner 2'), link_url=None),
     Photo(title=_('Runner 3'), src_path='img/runners/512/runner3.jpg', detail_src_path=None, alt=_('Runner 3'), link_url=None),
@@ -57,6 +62,8 @@ runners = [
 ]
 
 scarves = [
+    Photo(title=_("Multi forest scarf"), src_path='img/scarves/512/Scarf_Multi_Forest.jpg', detail_src_path='img/scarves/512/Scarf_Multi_Forest_Detail.jpg', alt=_("Multi forest scarf"), link_url=None),
+    Photo(title=_("Multi navy scarf"), src_path='img/scarves/512/Scarf_Multi_Navy_Front.jpg', detail_src_path='img/scarves/512/Scarf_Multi_Navy_Detail.jpg', alt=_("Multi navy scarf"), link_url=None),
     Photo(title=_("Sarah's scarf"), src_path='img/scarves/512/scarf-sarah.jpg', detail_src_path=None, alt=_("Sarah's scarf"), link_url=None),
     Photo(title=_('Scarf 1'), src_path='img/scarves/512/scarf1.jpg', detail_src_path=None, alt=_('Scarf 1'), link_url=None),
     Photo(title=_('Scarf 2'), src_path='img/scarves/512/scarf2.jpg', detail_src_path=None, alt=_('Scarf 2'), link_url=None),
@@ -72,6 +79,18 @@ throws = [
 ]
 
 towels = [
+    Photo(title=_('Fawn bread towel'), src_path='img/towels/512/Bread_Towel_Fawn.jpg', detail_src_path='img/towels/512/Bread_Towel_Fawn_Detail.jpg', alt=_('Fawn bread towel'), link_url=None),
+    Photo(title=_('Lemon hand towel'), src_path='img/towels/512/Hand_Towel_Lemon.jpg', detail_src_path='img/towels/512/Hand_Towel_Lemon_Detail.jpg', alt=_('Lemon hand towel'), link_url=None),
+    Photo(title=_('Mint hand towel'), src_path='img/towels/512/Hand_Towel_Lemon_Mint.jpg', detail_src_path='img/towels/512/Hand_Towel_Lemon_Mint_Detail.jpg', alt=_('Mint hand towel'), link_url=None),
+    Photo(title=_('Mint shrimp hand towel'), src_path='img/towels/512/Hand_Towel_Lemon_Mint_Shrimp.jpg', detail_src_path='img/towels/512/Hand_Towel_Lemon_Mint_Shrimp_Detail.jpg', alt=_('Mint shrimp hand towel'), link_url=None),
+    Photo(title=_('Natural cotton hand towel'), src_path='img/towels/512/Hand_Towel_Nat_Cotton.jpg', detail_src_path='img/towels/512/Hand_Towel_Nat_Cotton_Detail.jpg', alt=_('Natural cotton hand towel'), link_url=None),
+    Photo(title=_('Natural cotton green hand towel'), src_path='img/towels/512/Hand_Towel_Nat_Cotton_Green.jpg', detail_src_path='img/towels/512/Hand_Towel_Nat_Cotton_Green_Detail.jpg', alt=_('Natural cotton green hand towel'), link_url=None),
+    Photo(title=_('Natural cotton light green hand towel'), src_path='img/towels/512/Hand_Towel_Nat_Cotton_Lt_Green.jpg', detail_src_path='img/towels/512/Hand_Towel_Nat_Cotton_Lt_Green_Detail.jpg', alt=_('Natural cotton light green hand towel'), link_url=None),
+    Photo(title=_('Natural cotton stripe hand towel'), src_path='img/towels/512/Hand_Towel_Nat_Cotton_Stripe.jpg', detail_src_path='img/towels/512/Hand_Towel_Nat_Cotton_Stripe_Detail.jpg', alt=_('Natural cotton stripe hand towel'), link_url=None),
+    Photo(title=_('Tangerine lemon hand towel'), src_path='img/towels/512/Hand_Towel_Tangerine_Lemon.jpg', detail_src_path='img/towels/512/Hand_Towel_Tangerine_Lemon_Detail.jpg', alt=_('Tangerine lemon hand towel'), link_url=None),
+    Photo(title=_('Blue huck towel'), src_path='img/towels/512/Towel_Blue_Huck.jpg', detail_src_path='img/towels/512/Towel_Blue_Huck_Detail.jpg', alt=_('Blue huck towel'), link_url=None),
+    Photo(title=_('Raspberry huck towel'), src_path='img/towels/512/Towel_Raspberry_Huck.jpg', detail_src_path='img/towels/512/Towel_Raspberry_Huck_Detail.jpg', alt=_('Raspberry huck towel'), link_url=None),
+    Photo(title=_('Rose blue towel'), src_path='img/towels/512/Towel_Rose_Blue_Mult.JPG', detail_src_path='img/towels/512/Towel_Rose_Blue_Mult_Detail.JPG', alt=_('Rose blue towel'), link_url=None),
     Photo(title=_('Towel 1'), src_path='img/towels/512/towel1.jpg', detail_src_path=None, alt=_('Towel 1'), link_url=None),
     Photo(title=_('Towel 2'), src_path='img/towels/512/towel2.jpg', detail_src_path=None, alt=_('Towel 2'), link_url=None),
     Photo(title=_('Towel 3'), src_path='img/towels/512/towel3.jpg', detail_src_path=None, alt=_('Towel 3'), link_url=None),
