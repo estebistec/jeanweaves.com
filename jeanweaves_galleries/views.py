@@ -10,6 +10,10 @@ from jeanweaves_public.views import JeanWeavesPageView
 
 class JeanWeavesGalleryView(JeanWeavesPageView):
     page_layout = 'jeanweaves_galleries/_layout.html'
+    page_scripts = [
+        'js/vendor/zepto.min.js',
+        'js/jeanweaves_galleries.min.js'
+    ]
     photos = []
 
     def get_page_context(self):

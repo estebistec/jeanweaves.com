@@ -22,6 +22,7 @@ def site_info(request):
                 #{'href': reverse('tools'), 'title': _('Tools'), 'label': _('Tools')},
                 {'href': reverse('contact'), 'title': _('Contact me'), 'label': _('Contact me')},
             ],
+            'scripts': []
         }
     }
 

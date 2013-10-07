@@ -16,7 +16,7 @@
               <img class="image-set-image gallery-link-image" src="{{ galleries.base_photo_url }}{{ photo.src_path }}"{% if photo.alt %} alt="{{ photo.alt }}"{% endif %}{% if photo.title %} title="{{ photo.title }}"{% endif %}>
             </a>
           {% else %}
-          <img class="image-set-image" src="{{ galleries.base_photo_url }}{{ photo.src_path }}"{% if photo.alt %} alt="{{ photo.alt }}"{% endif %}{% if photo.title %} title="{{ photo.title }}"{% endif %}>
+          <img class="image-set-image" src="{{ galleries.base_photo_url }}{{ photo.src_path }}"{% if photo.alt %} alt="{{ photo.alt }}"{% endif %}{% if photo.title %} title="{{ photo.title }}"{% endif %}{% if photo.detail_src_path %} data-detail-src="{{ galleries.base_photo_url }}{{ photo.detail_src_path }}"  data-src="{{ galleries.base_photo_url }}{{ photo.src_path }}"{% endif %}>
           {% endif %}
         </li>
       {% endfor %}

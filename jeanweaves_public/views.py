@@ -11,12 +11,14 @@ class JeanWeavesPageView(TemplateView):
     page_title = None
     page_class = None
     page_layout = 'jeanweaves_public/_layout.html'
+    page_scripts = []
 
     def get_page_context(self):
         return {
             'layout': self.page_layout,
             'title': self.page_title,
-            'page_class': self.page_class
+            'page_class': self.page_class,
+            'scripts': self.page_scripts
         }
 
     def get_context_data(self, **kwargs):
