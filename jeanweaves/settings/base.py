@@ -84,8 +84,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.static",
     "django.core.context_processors.tz",
 
+    'jeanweaves_analytics.context_processors.analytics',
     'jeanweaves_public.context_processors.site_info',
-    # 'jeanweaves_public.context_processors.analytics',
     'jeanweaves_galleries.context_processors.galleries',
 )
 
@@ -100,6 +100,7 @@ ROOT_URLCONF = 'jeanweaves.urls'
 INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_jinja',
+    'jeanweaves_analytics',
     'jeanweaves_public',
     'jeanweaves_galleries',
     'jeanweaves_blog',

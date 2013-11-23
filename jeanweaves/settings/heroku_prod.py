@@ -9,3 +9,7 @@ from .heroku_base import *
 WSGI_APPLICATION = 'jeanweaves.wsgi.heroku_prod.application'
 
 ALLOWED_HOSTS = ['www.jeanweaves.com', 'jeanweaves.com']
+
+
+GOOGLE_ANALYTICS_ID = 'UA-45942273-2'
+GOOGLE_ANALYTICS_DOMAIN = 'jeanweaves.com'

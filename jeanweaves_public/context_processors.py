@@ -25,11 +25,3 @@ def site_info(request):
             'scripts': []
         }
     }
-
-
-def analytics(request):
-    return {
-        'analytics': {
-            'google_analytics_id': ''  # TODO UA-XXXXX-X
-        }
-    }
