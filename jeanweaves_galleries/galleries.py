@@ -32,6 +32,7 @@ damask = [
     Photo(title=_('Star and Snowflake Damask in Green and White'), src_path='img/damask/512/damask4.jpg', detail_src_path=None, alt=_('Star and Snowflake Damask in Green and White'), link_url=None),
     Photo(title=_('Star and Rose Damask in Red and White'), src_path='img/damask/512/damask5.jpg', detail_src_path=None, alt=_('Star and Rose Damask in Red and White'), link_url=None),
     Photo(title=_('Damask Green on Green'), src_path='img/damask/512/damask-green-on-green.jpg', detail_src_path=None, alt=_('Damask Green on Green'), link_url=None),
+    Photo(title=_('Forest Green Table Runner'), src_path='img/runners/512/forest-green-table-runner.jpg', detail_src_path=None, alt=_('Forest Green Table Runner'), link_url=None),
 ]
 
 placemats_and_napkins = [
@@ -59,7 +60,6 @@ runners = [
     Photo(title=_('Blue and White Runner Detail'), src_path='img/runners/512/runner5.jpg', detail_src_path=None, alt=_('Blue and White Runner Detail'), link_url=None),
     Photo(title=_('Double Weave Block Runner'), src_path='img/runners/512/runner6.jpg', detail_src_path=None, alt=_('Double Weave Block Runner'), link_url=None),
     Photo(title=_('Double Weave Block Runner Detail'), src_path='img/runners/512/runner7.jpg', detail_src_path=None, alt=_('Double Weave Block Runner Detail'), link_url=None),
-    Photo(title=_('Forest Green Table Runner'), src_path='img/runners/512/forest-green-table-runner.jpg', detail_src_path=None, alt=_('Forest Green Table Runner'), link_url=None),
 ]
 
 scarves = [
