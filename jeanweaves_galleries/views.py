@@ -69,6 +69,12 @@ class JeanWeavesTowelsGalleryView(JeanWeavesGalleryView):
     photos = galleries.towels
 
 
+class JeanWeavesPortfolioGalleryView(JeanWeavesGalleryView):
+    template_name = 'jeanweaves_galleries/portfolio.html'
+    page_title = _('Portfolio')
+    photos = galleries.portfolio
+
+
 THIRTY_DAYS = 60 * 60 * 24 * 30
 index = cache_page(THIRTY_DAYS)(JeanWeavesGalleryIndexView.as_view())
 animals = cache_page(THIRTY_DAYS)(JeanWeavesAnimalsGalleryView.as_view())
@@ -78,3 +84,4 @@ runners = cache_page(THIRTY_DAYS)(JeanWeavesRunnersGalleryView.as_view())
 scarves = cache_page(THIRTY_DAYS)(JeanWeavesScarvesGalleryView.as_view())
 throws = cache_page(THIRTY_DAYS)(JeanWeavesThrowsGalleryView.as_view())
 towels = cache_page(THIRTY_DAYS)(JeanWeavesTowelsGalleryView.as_view())
+portfolio = cache_page(THIRTY_DAYS)(JeanWeavesPortfolioGalleryView.as_view())

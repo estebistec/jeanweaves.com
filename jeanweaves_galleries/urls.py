@@ -16,6 +16,7 @@ urlpatterns = patterns('',
     url(r'^scarves/$', 'jeanweaves_galleries.views.scarves', name='scarves'),
     url(r'^throws/$', 'jeanweaves_galleries.views.throws', name='throws'),
     url(r'^towels/$', 'jeanweaves_galleries.views.towels', name='towels'),
+    url(r'^portfolio/$', 'jeanweaves_galleries.views.portfolio', name='portfolio'),
 
     # Backward compat with old URLs:
     (r'^index\.html$', RedirectView.as_view(url=reverse_lazy('index'))),
